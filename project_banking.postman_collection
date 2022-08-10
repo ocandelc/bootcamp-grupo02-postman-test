@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "86508397-c6c9-4950-9fd9-41424ef823b0",
+		"_postman_id": "2959690f-d2ab-42cb-9f44-2a3a5cfb0e29",
 		"name": "Project Banking",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "22628550"
+		"_exporter_id": "22592653"
 	},
 	"item": [
 		{
@@ -296,6 +296,175 @@
 		{
 			"name": "Service Client",
 			"item": [
+				{
+					"name": "Legal Representative",
+					"item": [
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"id\": \"62f14e6fafe3693a0bdc7782\",\r\n        \"code\": \"1-2\",\r\n        \"codeClient\": \"1\",\r\n        \"codePerson\": \"2\",\r\n        \"state\": true\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"62f14e6fafe3693a0bdc7782\",\r\n    \"code\": \"1-2\",\r\n    \"codeClient\": \"1\",\r\n    \"codePerson\": \"2\",\r\n    \"state\": false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives/62f14e6fafe3693a0bdc7782",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives",
+										"62f14e6fafe3693a0bdc7782"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives/62f14e6fafe3693a0bdc7781",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives",
+										"62f14e6fafe3693a0bdc7781"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code Client",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives/findByCodeClient/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives",
+										"findByCodeClient",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find By Code Person",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives/findByCodePerson/2",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives",
+										"findByCodePerson",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Find All",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8082/api/legalsrepresentatives",
+									"host": [
+										"localhost"
+									],
+									"port": "8082",
+									"path": [
+										"api",
+										"legalsrepresentatives"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
 				{
 					"name": "Client",
 					"item": [
@@ -1381,7 +1550,7 @@
 							"response": []
 						},
 						{
-							"name": "Find By Code",
+							"name": "Find By AccountNumber",
 							"request": {
 								"method": "GET",
 								"header": [],
